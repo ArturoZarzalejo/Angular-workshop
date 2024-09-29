@@ -1,8 +1,8 @@
 <!-- src/app/components/user-list/user-list.component.html -->
-<div>
+<div class="user-list-container">
   <h2>Lista de Usuarios</h2>
-  <button (click)="router.navigate(['/create'])">Agregar Usuario</button>
-  <table border="1" cellpadding="5" cellspacing="0">
+  <button (click)="router.navigate(['/create'])" class="pill">Agregar Usuario</button>
+  <table class="user-table">
     <thead>
       <tr>
         <th>ID</th>
@@ -17,8 +17,8 @@
         <td>{{ user.name }}</td>
         <td>{{ user.email }}</td>
         <td>
-          <button (click)="editUser(user.id)">Editar</button>
-          <button (click)="deleteUser(user.id)">Eliminar</button>
+          <button (click)="editUser(user.id)" class="pill">Editar</button>
+          <button (click)="deleteUser(user.id)" class="pill">Eliminar</button>
         </td>
       </tr>
     </tbody>

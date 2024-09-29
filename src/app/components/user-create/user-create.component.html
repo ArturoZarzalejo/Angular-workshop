@@ -1,16 +1,18 @@
 <!-- src/app/components/user-create/user-create.component.html -->
-<div>
+<div class="create-user-container">
   <h2>Agregar Nuevo Usuario</h2>
-  <form (ngSubmit)="addUser()">
-    <div>
+  <form (ngSubmit)="addUser()" class="create-user-form">
+    <div class="form-group">
       <label for="name">Nombre:</label>
-      <input id="name" [(ngModel)]="name" name="name" required />
+      <input id="name" [(ngModel)]="name" name="name" required class="input-field" />
     </div>
-    <div>
+    <div class="form-group">
       <label for="email">Email:</label>
-      <input id="email" [(ngModel)]="email" name="email" required />
+      <input id="email" [(ngModel)]="email" name="email" required class="input-field" />
     </div>
-    <button type="submit">Agregar</button>
-    <button type="button" (click)="router.navigate(['/'])">Cancelar</button>
+    <div class="button-group">
+      <button type="submit" class="pill">Agregar</button>
+      <button type="button" (click)="router.navigate(['/'])" class="pill">Cancelar</button>
+    </div>
   </form>
 </div>
